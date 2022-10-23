@@ -1,0 +1,75 @@
+<html>
+<title>Contact Us</title>
+
+<head>
+    <!-- this is the external style sheet from Bootstrap using a CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+            
+            <script>
+
+               function checkboxes()
+                {
+                    var firstName = document.getElementById("fName").value;
+                    if(firstName == "")
+                    {
+                        
+                        document.getElementById("fName").style.backgroundColor = "red";
+                        document.getElementById("fName").focus();
+                        document.getElementById("fNameMessage").innerHTML = "* Required";
+                        document.getElementById("fNameMessage").style.color = "red";
+                        
+                        
+                        return false;
+                    }
+                    var lastName = document.getElementById("lName").value;
+                    if(lastName == "")
+                    {
+                        
+                        document.getElementById("lName").style.backgroundColor = "red";
+                        document.getElementById("lName").focus();
+                        document.getElementById("lNameMessage").innerHTML = "* Required";
+                        document.getElementById("lNameMessage").style.color = "red";
+
+                        return false;
+                    }
+                    
+                    var Email = document.getElementById("Email").value;
+                    if(lastName == "")
+                    {
+                        
+                        document.getElementById("Email").style.backgroundColor = "red";
+                        document.getElementById("Email").focus();
+                        document.getElementById("EmailMessage").innerHTML = "* Required";
+                        document.getElementById("EmailMessage").style.color = "red";
+
+                        return false;
+                    }
+                }
+            </script>
+    </head>
+    <body style="background-color: lightpink">
+        <div style="margin-top: 35px;">
+        <h1>Contact Us!</h1>
+        <p></p>
+        <form action="">
+            <p>First Name: <input type="text" id="fName">&nbsp;<span id="fNameMessage"></span></p>
+            <p>Last Name: <input type="text" id="lName"></p>
+            <p>Email: <input type="text" id="Email"></p>
+            <h1>Do You Agree to the Terms of Service</h1>
+            <p> I hereby agree to abide by all U.S., Geneva Convention, and Flying Spagetti Monster law</p>
+            <p>YES!</p>
+            <input type="checkbox" id="yes" name="yes" value="I Agree">
+            <p>NO!</p>
+            <input type="checkbox" id="no" name="no" value="Disagree">
+            <p>SUBMIT HERE</p>
+            <button id="btnSubmit" class="btn btn-primary" onclick='checkboxes();'>Submit My Info</button>
+        </form>
+        <p><a href="FirstPage.html">Home Page</a>
+        &nbsp;|&nbsp;<a href="page2.html">Short Story</a></p>
+    </div>
+    </body>
+</html>
